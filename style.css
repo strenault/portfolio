@@ -90,6 +90,55 @@ nav ul li:hover {
 	max-width: 100%;
 	height: auto;
 }
+.up {
+	animation: fadein 2s;
+}
+
+.up--15 {
+	animation-delay: 800ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+.up--1 {
+	animation-delay: 50ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+.up--2 {
+	animation-delay: 150ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+.up--3 {
+	animation-delay: 300ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+.up--4 {
+	animation-delay: 450ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+.up--5 {
+	animation-delay: 600ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+.up--6 {
+	animation-delay: 750ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+@keyframes fadein {
+    from {
+		transform: translateY(200px);
+        opacity:0;
+    }
+    to {
+		transform: translateY(0);
+        opacity:1;
+    }
+}
 
 .page-content .projects-section {
 	margin-top: 6%;
