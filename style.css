@@ -134,6 +134,21 @@ nav ul li:hover {
 	animation-fill-mode: forwards;
 	opacity:0;
 }
+.up--8 {
+	animation-delay: 1050ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+.up--9 {
+	animation-delay: 1200ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+.up--10 {
+	animation-delay: 1350ms;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
 @keyframes fadein {
     from {
 		transform: translateY(200px);
