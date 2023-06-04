@@ -160,10 +160,10 @@ nav ul li:hover {
     }
 }
 
-.page-content .projects-section {
+.page-content .projects-section{
 	margin-top: 6%;
 }
-.page-content .projects-section h1 {
+.page-content .projects-section h1{
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
 	font-size: 3vw;
@@ -173,21 +173,50 @@ nav ul li:hover {
 	display: flex;
 	flex-wrap: wrap;
 }
-.page-content .projects-section .project {
+.page-content .projects-section .project{
 	margin-right: 20px;
 	max-width: 200px
 }
-.page-content .projects-section .project h4 {
+.page-content .projects-section .project h4{
 	margin: 0;
 	color: darkcyan;
 }
-.page-content .projects-section .project .description {
+.page-content .projects-section .project .description{
 	font-size: 12px;
 }
-.page-content .projects-section .project .dates {
+.page-content .projects-section .project .dates{
 	font-size: 13px;
 	color: rgb(145, 145, 145);
 }
+.page-content .projects-section1{
+	margin-top: 6%;
+}
+.page-content .projects-section1 h1{
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 3vw;
+	color: crimson;
+}
+.page-content .projects-section1{
+	display: flex;
+	flex-wrap: wrap;
+}
+.page-content .projects-section1 .project1{
+	margin-right: 20px;
+	max-width: 200px
+}
+.page-content .projects-section1 .project1 h4{
+	margin: 0;
+	color: darkcyan;
+}
+.page-content .projects-section1 .project1 .description{
+	font-size: 12px;
+}
+.page-content .projects-section1 .project1 .dates{
+	font-size: 13px;
+	color: rgb(145, 145, 145);
+}
+
 
 footer {
 	margin-top: 5%;
@@ -236,7 +265,21 @@ footer .colonne a:hover{
 		margin-bottom: 20px;
 		max-width: 100%;
 	}
-	.page-content .projects-section .project .description {
+	.page-content .projects-section1 .project .description {
+		font-size: 13px;
+	}
+	.page-content .projects-section1 {
+		margin-top: 15%;
+	}
+	.page-content .projects-section1 h1 {
+		font-size: 1.5em;
+	}
+	.page-content .projects-section1 .project {
+		margin-right: 0;
+		margin-bottom: 20px;
+		max-width: 100%;
+	}
+	.page-content .projects-section1 .project .description {
 		font-size: 13px;
 	}
 
