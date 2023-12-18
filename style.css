@@ -239,6 +239,10 @@ nav ul li:hover {
 	font-size: 13px;
 	color: rgb(145, 145, 145);
 }
+.page-content .projects-section .projects1 {
+	display: flex;
+	flex-wrap: wrap;
+}
 .page-content .projects-section1{
 	margin-top: 6%;
 }
@@ -267,6 +271,10 @@ nav ul li:hover {
 .page-content .projects-section1 .project1 .dates{
 	font-size: 13px;
 	color: rgb(145, 145, 145);
+}
+.page-content .projects-section .projects2 {
+	display: flex;
+	flex-wrap: wrap;
 }
 .page-content .projects-section2{
 	margin-top: 6%;
