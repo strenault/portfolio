@@ -239,7 +239,7 @@ nav ul li:hover {
 	font-size: 13px;
 	color: rgb(145, 145, 145);
 }
-.page-content .projects-section .projects1 {
+.page-content .projects-section1 .projects1 {
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -253,10 +253,7 @@ nav ul li:hover {
 	font-size: 3vw;
 	color: crimson;
 }
-.page-content .projects-section1 {
-	display: flex;
-	flex-wrap: wrap;
-}
+
 .page-content .projects-section1 .project1{
 	margin-right: 20px;
 	max-width: 200px
@@ -272,7 +269,7 @@ nav ul li:hover {
 	font-size: 13px;
 	color: rgb(145, 145, 145);
 }
-.page-content .projects-section .projects2 {
+.page-content .projects-section2 .projects2 {
 	display: flex;
 	flex-wrap: wrap;
 }
