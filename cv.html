@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CV Stéphane Renault — Administrateur réseaux et sécurité</title>
+<style>
+  :root {
+    --bleu: #1b4f8a;
+    --bleu-fonce: #123a67;
+    --bleu-clair: #eaf1f8;
+    --accent: #2b7fd4;
+    --texte: #22292f;
+    --gris: #5b6672;
+    --fond: #f4f6f8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--fond);
+    color: var(--texte);
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  .page {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,.12);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+  }
+  /* ---------- entête ---------- */
+  header {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, var(--bleu-fonce), var(--bleu));
+    color: #fff;
+    padding: 26px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  header h1 { font-size: 26px; letter-spacing: .5px; }
+  header .titre { font-size: 14px; opacity: .9; font-weight: 300; letter-spacing: 1px; text-transform: uppercase; }
+  .contact-top { text-align: right; font-size: 12px; opacity: .95; }
+  .contact-top span { display: block; margin-bottom: 3px; }
+  /* ---------- colonne gauche ---------- */
+  aside {
+    background: var(--bleu-clair);
+    padding: 22px 20px;
+  }
+  aside h2 {
+    color: var(--bleu-fonce);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+  }
+  .bloc { margin-bottom: 24px; }
+  /* barres de compétences */
+  .comp { margin-bottom: 10px; }
+  .comp .label { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; margin-bottom: 3px; }
+  .barre { height: 8px; background: #d7e3ef; border-radius: 4px; overflow: hidden; }
+  .niveau { height: 100%; background: linear-gradient(90deg, var(--accent), var(--bleu-fonce)); border-radius: 4px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+  .tag { background: #fff; border: 1px solid var(--accent); color: var(--bleu-fonce); border-radius: 10px; padding: 2px 8px; font-size: 11px; }
+  /* ---------- colonne droite ---------- */
+  main { padding: 24px 28px; }
+  main h2 {
+    color: var(--bleu);
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid var(--bleu-clair);
+    padding-bottom: 4px;
+    margin: 18px 0 10px;
+  }
+  .profil p { margin-bottom: 8px; text-align: justify; }
+  .atouts li { margin: 0 0 6px 16px; }
+  .atouts b { color: var(--bleu-fonce); }
+  .poste { margin-bottom: 14px; }
+  .poste h3 { font-size: 14px; color: var(--bleu-fonce); }
+  .poste .dates { font-size: 11.5px; color: var(--gris); font-weight: 600; }
+  .poste ul { margin: 5px 0 0 16px; }
+  .poste li { margin-bottom: 3px; }
+  .formation { margin-bottom: 12px; }
+  .formation h3 { font-size: 13px; color: var(--bleu-fonce); }
+  .portfolio { font-size: 12px; color: var(--bleu); }
+  /* ---------- impression ---------- */
+  @media print {
+    body { background: #fff; font-size: 11.5px; }
+    .page { margin: 0; box-shadow: none; max-width: none; width: 100%; }
+    @page { size: A4; margin: 8mm; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div>
+      <h1>Stéphane Renault</h1>
+      <div class="titre">Gestion des habilitations SI</div>
+    </div>
+    <div class="contact-top">
+      <span>📞 07 86 74 75 49</span>
+      <span>✉️ strenault@wanadoo.fr</span>
+      <span>🌐 strenault.github.io/portfolio</span>
+      <span>🔗 linkedin.com/in/stephane-renault-7215bb232</span>
+    </div>
+  </header>
+
+  <aside>
+    <div class="bloc">
+      <h2>Compétences</h2>
+
+      <div class="comp">
+        <div class="label"><span>Active Directory / Windows Server</span><span>85%</span></div>
+        <div class="barre"><div class="niveau" style="width:85%"></div></div>
+      </div>
+      <div class="comp">
+        <div class="label"><span>PowerShell</span><span>90%</span></div>
+        <div class="barre"><div class="niveau" style="width:90%"></div></div>
+      </div>
+      <div class="comp">
+        <div class="label"><span>Réseaux (OSI, DHCP, DNS, Cisco)</span><span>80%</span></div>
+        <div class="barre"><div class="niveau" style="width:80%"></div></div>
+      </div>
+      <div class="comp">
+        <div class="label"><span>Cybersécurité / Firewalling</span><span>75%</span></div>
+        <div class="barre"><div class="niveau" style="width:75%"></div></div>
+      </div>
+      <div class="comp">
+        <div class="label"><span>Virtualisation / Supervision</span><span>70%</span></div>
+        <div class="barre"><div class="niveau" style="width:70%"></div></div>
+      </div>
+      <div class="comp">
+        <div class="label"><span>SI hospitalier (EasyVista, Citrix, EDR)</span><span>85%</span></div>
+        <div class="barre"><div class="niveau" style="width:85%"></div></div>
+      </div>
+      <div class="comp">
+        <div class="label"><span>Développement web</span><span>60%</span></div>
+        <div class="barre"><div class="niveau" style="width:60%"></div></div>
+      </div>
+    </div>
+
+    <div class="bloc">
+      <h2>Habilitations &amp; accès</h2>
+      <div class="tags">
+        <span class="tag">Cycle de vie des comptes</span>
+        <span class="tag">Profils &amp; droits</span>
+        <span class="tag">Traçabilité</span>
+        <span class="tag">ITIL</span>
+        <span class="tag">PGSSI-S</span>
+        <span class="tag">GLPI</span>
+        <span class="tag">WDS/MDT</span>
+        <span class="tag">Linux / TCP-IP</span>
+      </div>
+    </div>
+
+    <div class="bloc">
+      <h2>Qualités</h2>
+      <div class="tags">
+        <span class="tag">Rigueur</span>
+        <span class="tag">Confidentialité</span>
+        <span class="tag">Résistance au stress</span>
+        <span class="tag">Leadership</span>
+        <span class="tag">Autonomie</span>
+        <span class="tag">Sens du service</span>
+        <span class="tag">Adaptabilité</span>
+      </div>
+    </div>
+
+    <div class="bloc">
+      <h2>Formations</h2>
+      <div class="formation">
+        <h3>Formation Windows 11</h3>
+        <div class="dates">Diagnostic et maintenance des postes</div>
+      </div>
+      <div class="formation">
+        <h3>Admin. réseaux et sécurité — POEI M2IFORMATION</h3>
+        <div class="dates">06/2023 – 09/2023</div>
+        <div class="tags">
+          <span class="tag">Réseaux &amp; sécurité</span>
+          <span class="tag">Admin. système</span>
+          <span class="tag">Cybersécurité</span>
+          <span class="tag">Virtualisation</span>
+          <span class="tag">Firewalls</span>
+          <span class="tag">Supervision</span>
+        </div>
+      </div>
+      <div class="formation">
+        <h3>Technicien système et réseaux — OpenClassrooms</h3>
+        <div class="dates">12/2022 – 06/2023</div>
+        <div class="tags">
+          <span class="tag">WDS/MDT</span>
+          <span class="tag">GLPI / ITIL</span>
+          <span class="tag">DHCP / DNS</span>
+          <span class="tag">Modèle OSI</span>
+        </div>
+      </div>
+      <div class="formation">
+        <h3>Développeur web — OpenClassrooms</h3>
+        <div class="dates">03/2022 – 08/2022</div>
+        <div class="tags">
+          <span class="tag">HTML / CSS / SASS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">SQL / phpMyAdmin</span>
+          <span class="tag">API REST</span>
+          <span class="tag">SEO</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <h2>Profil</h2>
+    <div class="profil">
+      <p>Administrateur réseaux et sécurité, formé en 2023 (POEI M2IFORMATION), avec une première expérience en gestion d'incidents chez BPCE-IT (INETUM). Issu du secteur de la production postale, j'ai supervisé des équipes de 26 à 56 agents et pratiqué au quotidien la gestion fiable et tracée de droits, de flux et de procédures : c'est exactement le cœur du métier d'un centre d'habilitations SI, où chaque création, modification ou retrait de droit doit être rigoureux, documenté et respectueux de la confidentialité des données de santé.</p>
+      <ul class="atouts">
+        <li><b>Rigueur et précision :</b> culture de la traçabilité (qui a accès à quoi, quand, pourquoi).</li>
+        <li><b>Confidentialité :</b> conscience de la sensibilité des données de santé et exigence de réserve.</li>
+        <li><b>Leadership :</b> encadrement de 26 à 56 agents à La Poste, formation technique du personnel.</li>
+        <li><b>Résistance au stress :</b> gestion efficace des situations critiques, continuité des opérations.</li>
+        <li><b>Autonomie et adaptabilité :</b> reconversion réussie, formations continues, amélioration continue des processus.</li>
+      </ul>
+    </div>
+
+    <h2>Parcours professionnel</h2>
+    <div class="poste">
+      <h3>Administrateur réseaux — BPCE-IT (via INETUM)</h3>
+      <div class="dates">06/2023 – 12/2023</div>
+      <ul>
+        <li>Gestion des incidents et résolution de problèmes avec une approche proactive.</li>
+        <li>Supervision et coordination des tâches liées à la maintenance des équipements réseau.</li>
+      </ul>
+    </div>
+    <div class="poste">
+      <h3>Pilote de production — La Poste, PIC Nantes Atlantique</h3>
+      <div class="dates">02/1993 – 08/2014</div>
+      <ul>
+        <li>Pilotage de la production et gestion des flux courriers.</li>
+        <li>Remplacement du chef d'équipe, coordination de 26 à 56 agents.</li>
+        <li>Formation technique du personnel.</li>
+      </ul>
+    </div>
+    <div class="poste">
+      <h3>Cuisinier — Colonie de vacances (CCAS)</h3>
+      <div class="dates">1991</div>
+    </div>
+    <div class="poste">
+      <h3>Service militaire</h3>
+      <div class="dates">10/1991 – 08/1992</div>
+    </div>
+
+    <h2>Projets et réalisations</h2>
+    <div class="poste">
+      <h3>Outils PowerShell — parc du CHU de Nantes</h3>
+      <ul>
+        <li><b>StressTest_PC (v4.4)</b> : stress matériel CPU/RAM/disque/GPU parallélisé avec étalonnage, scores, détection de goulots d'étranglement, aide à la décision de compatibilité Windows 11. Sans droits administrateur, depuis clé USB.</li>
+        <li><b>Get-Diagnostic (v2.3)</b> : diagnostic et dépannage (SMART, services critiques, réseau/proxy, BitLocker, WSUS/Intune/GPO), mode réparation assistée avec point de restauration, rapport HTML hiérarchisé pour le support N1/N2.</li>
+        <li><b>Diag_PC (orchestrateur modulaire)</b> : plateforme en 3 modules — contrôle des applications métiers du SI hospitalier (Office 365, SSO/webmail, Citrix Workspace, magasin applicatif), état de sécurité (EDR, antivirus), rapport HTML A4 nominatif avec historique CSV.</li>
+        <li><b>Rch Pilote</b> : recherche des pilotes dans la base de données SCCM pour identifier les drivers disponibles des postes du parc.</li>
+        <li><b>DiagIdentification.psm1</b> : module commun d'identification des postes, mutualisé entre tous les outils.</li>
+      </ul>
+    </div>
+    <div class="poste">
+      <h3>Autres projets</h3>
+      <ul>
+        <li>Déploiement du parc informatique d'une start-up via le réseau et l'Active Directory.</li>
+        <li>Support aux utilisateurs (helpdesk) : accueil, qualification et traitement des demandes.</li>
+        <li>Installation et configuration du réseau d'une PME : environnement virtualisé conforme au cahier des charges.</li>
+      </ul>
+      <p class="portfolio">Détail des projets : strenault.github.io/portfolio</p>
+    </div>
+  </main>
+
+</div>
+</body>
+</html>
