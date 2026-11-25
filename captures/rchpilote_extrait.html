@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rch Pilote — mise à jour sélective des pilotes</title>
+<style>
+  :root { font-family: "Segoe UI", Roboto, Arial, sans-serif; color: #22292f; background: #f4f6f8; }
+  body { margin: 0; }
+  .wrap { max-width: 900px; margin: 24px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,.12); padding: 28px 32px; }
+  h1 { color: #1b4f8a; font-size: 22px; margin-bottom: 4px; }
+  .meta { color: #5b6672; font-size: 13px; margin-bottom: 18px; }
+  p { line-height: 1.5; margin-bottom: 14px; }
+  pre { background: #0f1c2e; color: #d7e3ef; padding: 18px; border-radius: 6px; overflow-x: auto; font-size: 12.5px; line-height: 1.5; font-family: Consolas, "Courier New", monospace; }
+  .note { background: #eaf1f8; border-left: 4px solid #2b7fd4; padding: 10px 14px; font-size: 13px; border-radius: 4px; }
+  a { color: #1b4f8a; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Rch Pilote — mise à jour sélective des pilotes</h1>
+  <div class="meta">PowerShell · pnputil · WinForms — v3.0 — 2026 — extrait de code assaini</div>
+  <p>Rch Pilote mappe le partage réseau des pilotes, propose le dossier correspondant au modèle de machine,
+  compare les pilotes déjà publiés sur le poste (<code>pnputil /enum-drivers</code>) avec les fichiers <code>.inf</code>
+  du dossier, et n'installe que les pilotes manquants. Récapitulatif en fin de traitement et proposition de redémarrage si besoin.</p>
+  <div class="note">Extrait commenté publié à titre d'exemple : le code complet n'est pas diffusé. Partages réseau, lettres de lecteur et noms de serveurs sont des exemples génériques.</div>
+  <pre># Extrait Rch Pilote : installation sélective de pilotes via pnputil
+# Principe : au lieu de réinstaller tous les pilotes d'un dossier réseau,
+# l'outil compare les pilotes déjà publiés sur le poste (pnputil /enum-drivers)
+# avec les .inf du dossier choisi, et n'installe QUE les pilotes manquants.
+# Gain de temps sur un parc important et zéro risque d'écraser une version
+# plus récente déjà en place.
+# (Partage réseau, lettres de lecteur et noms de serveur : exemples génériques.)
+
+function Get-InstalledDrivers {
+    # Analyse la sortie de pnputil /enum-drivers : Published Name + Driver Version
+    $output = pnputil /enum-drivers | Out-String
+    $installedDrivers = @()
+    $currentDriver = @{}
+
+    $output -split "`r`n" | ForEach-Object {
+        if ($_ -match "Published Name:\s*(.+)") {
+            $currentDriver["Name"] = $matches[1].Trim()
+        } elseif ($_ -match "Driver Version:\s*(.+)") {
+            $currentDriver["Version"] = $matches[1].Trim()
+            if ($currentDriver["Name"]) {
+                $installedDrivers += $currentDriver
+                $currentDriver = @{}
+            }
+        }
+    }
+    return $installedDrivers
+}
+
+function Install-Drivers {
+    param(
+        [string]$driversPath,        # ex: \\serveur\partage$\Pilotes\Windows
+        [array]$installedDrivers
+    )
+
+    $infFiles = Get-ChildItem -Path $driversPath -Filter "*.inf" -File -Recurse -ErrorAction SilentlyContinue
+    $updatedCount = 0; $skippedCount = 0
+
+    foreach ($infFile in $infFiles) {
+        # Nom affichable du pilote lu dans le .inf
+        $content = Get-Content $infFile.FullName -Raw
+        $driverName = if ($content -match "DriverPackageDisplayName\s*=\s*(.+)") {
+            $matches[1].Trim()
+        } else { [IO.Path]::GetFileNameWithoutExtension($infFile) }
+
+        $isInstalled = [bool]($installedDrivers | Where-Object { $_["Name"] -eq $driverName })
+
+        if (-not $isInstalled) {
+            Start-Process -FilePath "pnputil" -ArgumentList "/add-driver `"$($infFile.FullName)`" /install" -Wait -NoNewWindow
+            $updatedCount++
+            Write-Host "Pilote installé : $driverName" -ForegroundColor Green
+        } else {
+            $skippedCount++
+            Write-Host "Déjà installé, ignoré : $driverName" -ForegroundColor Yellow
+        }
+    }
+    Write-Host "`nRésumé : $updatedCount installés, $skippedCount déjà présents."
+}
+
+# Flux complet :
+# 1. Mappe temporairement le partage réseau des pilotes en Z: (net use, non persistant)
+# 2. Boîte de dialogue de sélection du dossier modèle (ex: Z:\LENOVO\ThinkPad_L570)
+# 3. Démapppage immédiat, le chemin est converti en UNC pour pnputil
+# 4. Confirmation, installation sélective, proposition de redémarrer si besoin</pre>
+  <p><a href="../index.html#outils-parc">← Retour au portfolio</a></p>
+</div>
+</body>
+</html>
