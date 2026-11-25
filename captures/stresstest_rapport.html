@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rapport StressTest - HP HP EliteDesk 800 G4 DM 35W</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+        h1 { color: #0066cc; }
+        h2 { color: #333; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        h3 { color: #555; }
+        .summary { background-color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .pass { color: green; font-weight: bold; }
+        .fail { color: red; font-weight: bold; }
+        .warn { color: orange; font-weight: bold; }
+        .not-tested { color: #999; font-style: italic; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #0066cc; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .critical { background-color: #ffdddd; }
+        .warning { background-color: #fff3cd; }
+        .footer { margin-top: 30px; font-size: 0.9em; color: #666; }
+    </style>
+</head>
+<body>
+    <h1>Rapport StressTest PC - HP HP EliteDesk 800 G4 DM 35W</h1>
+    <p><strong>Poste:</strong> POSTE-001</p>
+    <p><strong>Série:</strong> SN-EXEMPLE-001</p>
+    <p><strong>Type:</strong> Tiny / Mini PC (Tiny)</p>
+    <p><strong>Durée des tests:</strong> 10 minutes</p>
+    <p><strong>Date:</strong> 19/10/2026 15:02:09</p>
+
+    <div class="summary">
+        <h2>Résumé</h2>
+        <p><strong>Score Global:</strong> 81.2 / 100</p>
+        <p><strong>Score Système:</strong> 95 / 100</p>
+        <p><strong>Compatible Win11:</strong> <span class="pass">[OK]</span></p>        <p><strong>Décision production:</strong> <span class="pass">[OK PRODUCTION WINDOWS 11]</span></p>        <p><strong>Problèmes critiques:</strong> Aucun</p>
+        <p><strong>Avertissements:</strong> Aucun</p>
+    </div>
+
+    <h2>Configuration Matérielle</h2>
+    <table>
+        <tr><th>Propriété</th><th>Valeur</th></tr>
+        <tr><td>Fabricant</td><td>HP</td></tr>
+        <tr><td>Modèle</td><td>HP EliteDesk 800 G4 DM 35W</td></tr>
+        <tr><td>Numéro de série</td><td>SN-EXEMPLE-001</td></tr>
+        <tr><td>Type de machine</td><td>Tiny / Mini PC</td></tr>
+        <tr><td>Nombre de cœurs</td><td>6</td></tr>
+        <tr><td>RAM</td><td>15.78 GB</td></tr>
+        <tr><td>Type de disque</td><td>SSD</td></tr>
+        <tr><td>Système d'exploitation</td><td>Microsoft Windows 11 Entreprise Version 10.0.26200</td></tr>
+    </table>    <h2>Détails de la RAM</h2>
+    <table>
+        <tr>
+            <th>Slot</th>
+            <th>Capacité</th>
+            <th>Fréquence</th>
+            <th>Numéro de série</th>
+        </tr>        <tr>
+            <td>ChannelB</td>
+            <td>8 GB</td>
+            <td>2667 MHz</td>
+            <td>SN-RAM-001</td>
+        </tr>        <tr>
+            <td>ChannelA</td>
+            <td>8 GB</td>
+            <td>2667 MHz</td>
+            <td>SN-RAM-002</td>
+        </tr>    </table>    <h2>Résultats des Tests</h2>
+    <table>
+        <tr>
+            <th>Test</th>
+            <th>Score</th>
+            <th>Statut</th>
+            <th>Latence</th>
+            <th>Métrique</th>
+            <th>Goulot d'étranglement</th>
+        </tr>        <tr class="">
+            <td>CPU</td>
+            <td>90</td>
+            <td><span class="pass">[OK]</span></td>
+            <td>N/A</td>
+            <td>40.2 %</td>
+            <td>OK</td>
+        </tr>        <tr class="">
+            <td>RAM</td>
+            <td>95</td>
+            <td><span class="pass">[OK]</span></td>
+            <td>N/A</td>
+            <td>3232 MB</td>
+            <td>OK</td>
+        </tr>        <tr class="">
+            <td>DISK</td>
+            <td>100</td>
+            <td><span class="pass">[OK]</span></td>
+            <td>4.3</td>
+            <td>78577 IO ops</td>
+            <td>OK</td>
+        </tr>        <tr class="warning">
+            <td>GPU</td>
+            <td>40</td>
+            <td><span class="pass">[OK]</span></td>
+            <td>N/A</td>
+            <td>2 % GPU</td>
+            <td>GPU_HIGH_USAGE</td>
+        </tr>    </table>
+
+    <h2>Détails Techniques</h2>
+    <h3>Compatibilité Windows 11</h3>
+    <p><strong>Score:</strong> 81.2/100</p>
+    <p><strong>Compatible:</strong> Oui</p>
+    <p><strong>Raisons:</strong> Aucune</p>
+
+    <h3>Analyse des Goulots d'Étranglement</h3>
+    <p><strong>Principal:</strong> GPU_HIGH_USAGE</p>
+    <p><strong>Critiques:</strong> Aucun</p>
+    <p><strong>Avertissements:</strong> Aucun</p>
+
+    <h2>Export des Données</h2>
+    <p>Les données brutes sont disponibles dans les fichiers suivants :</p>
+    <p><strong>JSON:</strong> Rapports\StressTest_POSTE-001_20261019_150209.json</p>
+    <p><strong>CSV:</strong> Rapports\StressTest_POSTE-001_20261019_150209.csv</p>
+    <p>Ces fichiers contiennent tous les détails techniques pour une analyse approfondie.</p>
+
+    <p class="footer">Rapport généré par StressTest_PC - Version 4.4 | 19/10/2026 15:02:09</p>
+</body>
+</html>

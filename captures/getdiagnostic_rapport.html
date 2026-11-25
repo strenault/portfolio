@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+body { font-family: "Segoe UI", Arial, sans-serif; margin: 30px; color: #1e293b; }
+h1 { color: #1d4ed8; }
+table { border-collapse: collapse; width: 100%; margin-top: 15px; }
+th { background: #1d4ed8; color: white; padding: 8px 12px; text-align: left; }
+td { padding: 7px 12px; border-bottom: 1px solid #e2e8f0; }
+tr.crit td { background: #fee2e2; color: #991b1b; }
+tr.att td { background: #fef9c3; color: #854d0e; }
+tr.ok td { color: #166534; }
+tr.info td { color: #475569; background: #f1f5f9; }
+</style>
+</head><body>
+<h1>Diagnostic du poste POSTE-001</h1><p>Genere le 2026-10-19 15:50 par Get-Diagnostic.ps1</p><p>Mode : Diagnostic seul &mdash; Bilan : <b>0 critique(s)</b>, <b>6 attention(s)</b>, 14 OK &mdash; Duree du diagnostic : 25,4 s</p><p>Poste : HP HP EliteDesk 800 G4 DM 35W (S/N SN-EXEMPLE-001) - ID : POSTE-001 - Type : Tiny / Mini PC</p>
+<table>
+<colgroup><col/><col/><col/><col/></colgroup>
+<tr><th>Domaine</th><th>Niveau</th><th>Constat</th><th>Recommandation</th></tr>
+<tr><td>BitLocker</td><td>Attention</td><td>D: : chiffrement SANS protection active (cle en clair)</td><td>Resume-BitLocker / verifier la sauvegarde de la cle dans AD ou compte Microsoft</td></tr>
+<tr><td>Demarrage</td><td>Attention</td><td>Dernier demarrage : 130,5 s</td><td>Desactiver les programmes de demarrage (Gestionnaire des taches)</td></tr>
+<tr><td>Journal</td><td>Attention</td><td>3 evenements de &#39;NETLOGON&#39;</td><td>Analyser : Get-WinEvent -FilterHashtable @{LogName=&#39;System&#39;; ProviderName=&#39;NETLOGON&#39;} -MaxEvents 1 | fl</td></tr>
+<tr><td>Journal</td><td>Attention</td><td>8 evenements de &#39;Service Control Manager&#39;</td><td>Analyser : Get-WinEvent -FilterHashtable @{LogName=&#39;System&#39;; ProviderName=&#39;Service Control Manager&#39;} -MaxEvents 1 | fl</td></tr>
+<tr><td>Journal</td><td>Attention</td><td>114 evenements de &#39;Microsoft-Windows-BitLocker-Driver&#39;</td><td>Analyser : Get-WinEvent -FilterHashtable @{LogName=&#39;System&#39;; ProviderName=&#39;Microsoft-Windows-BitLocker-Driver&#39;} -MaxEvents 1 | fl</td></tr>
+<tr><td>Peripherique</td><td>Attention</td><td>&#39;Intel(R) XTU Component Device&#39; en etat Degraded</td><td>Reinstaller le pilote (pnputil /enum-drivers)</td></tr>
+<tr><td>Identification</td><td>Info</td><td>Poste POSTE-001 - Type machine : Tiny / Mini PC (source : Model)</td><td></td></tr>
+<tr><td>Identification</td><td>Info</td><td>Machine Tiny/Mini PC : verifier l&#39;alimentation externe et le support VESA</td><td></td></tr>
+<tr><td>MAJ</td><td>Info</td><td>MAJ gerees par WSUS (https://wsus.exemple-interne.fr:8531) - Derniere MAJ installee : il y a 4 jours (KB5127648)</td><td>Verifier la conformite cote WSUS, pas sur le poste</td></tr>
+<tr><td>Ressources</td><td>Info</td><td>Processus msedgewebview2 : 651 Mo de RAM</td><td></td></tr>
+<tr><td>Ressources</td><td>Info</td><td>Processus msedge : 1131 Mo de RAM</td><td></td></tr>
+<tr><td>Ressources</td><td>Info</td><td>Processus Memory Compression : 579 Mo de RAM</td><td></td></tr>
+<tr><td>Systeme</td><td>Info</td><td>Windows Microsoft Windows 11 Entreprise build 26200</td><td></td></tr>
+<tr><td>BitLocker</td><td>OK</td><td>C: chiffre et protege</td><td></td></tr>
+<tr><td>Disque</td><td>OK</td><td>C: 70,3 % libre</td><td></td></tr>
+<tr><td>Disque</td><td>OK</td><td>D: 96,6 % libre</td><td></td></tr>
+<tr><td>Reseau</td><td>OK</td><td>DNS, passerelle et Internet fonctionnels (via proxy)</td><td></td></tr>
+<tr><td>Ressources</td><td>OK</td><td>Memoire chargee a 60 %</td><td></td></tr>
+<tr><td>Ressources</td><td>OK</td><td>Aucun redemarrage en attente</td><td></td></tr>
+<tr><td>Service</td><td>OK</td><td>WinRM : Running</td><td></td></tr>
+<tr><td>Service</td><td>OK</td><td>Dhcp : Running</td><td></td></tr>
+<tr><td>Service</td><td>OK</td><td>Spooler : Running</td><td></td></tr>
+<tr><td>Service</td><td>OK</td><td>Dnscache : Running</td><td></td></tr>
+<tr><td>Service</td><td>OK</td><td>wuauserv : Stopped</td><td></td></tr>
+<tr><td>Service</td><td>OK</td><td>W32Time : Running</td><td></td></tr>
+<tr><td>Systeme</td><td>OK</td><td>Aucun arret inattendu sur 7 jours</td><td></td></tr>
+<tr><td>Systeme</td><td>OK</td><td>Uptime : 0j 7h</td><td></td></tr>
+</table>
+</body></html>

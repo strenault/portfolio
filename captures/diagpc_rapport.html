@@ -1,0 +1,240 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Diagnostic PC - Hors production (exemple anonymise)</title>
+
+<style>
+
+@page {
+    size: A4;
+    margin: 20mm;
+}
+
+body{
+    font-family:Arial;
+    font-size:12px;
+    color:#000;
+}
+
+h1{
+    text-align:center;
+    border-bottom:2px solid #000;
+    padding-bottom:10px;
+}
+
+h2{
+    background:#add8e6;
+    padding:5px;
+    border-left:5px solid #48e448;
+}
+
+.section{
+    margin-bottom:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:5px;
+}
+
+th, td{
+    border:1px solid #ccc;
+    padding:5px;
+    text-align:left;
+}
+
+th{
+    background:#90ee90;
+    color:black;
+    border:1px solid #ccc;
+    padding:5px;
+    text-align:left;
+}
+
+.status-ok{color:green;font-weight:bold;}
+.status-ko{color:red;font-weight:bold;}
+.status-warn{color:orange;font-weight:bold;}
+
+pre{
+    white-space:pre-wrap;
+    font-size:12px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Diagnostic materiel - POSTE-002</h1>
+
+<div class="section">
+<h2>Informations generales</h2>
+<table>
+<tr><th>Temps</th><td>1 min 54 sec</td></tr>
+<tr><th>Machine</th><td>PC Fixe</td></tr>
+<tr><th>Detection</th><td>
+<span style='color:red'>Inconnu</span>
+</td></tr>
+<tr><th>Modele</th><td>ONYX Healthcare Inc. Venus-222-192</td></tr>
+<tr><th>Type</th><td>Poste standard</td></tr>
+<tr><th>Tiny</th><td>False</td></tr>
+<tr><th>Photos</th><td>Aucune</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Carte mere & BIOS</h2>
+<table>
+<tr><th>Carte mere</th><td><pre><table>
+<tr><td><b>Fabricant</b></td><td>ONYX Healthcare Inc.</td></tr>
+<tr><td><b>Modele</b></td><td>Venus-222-192</td></tr>
+<tr><td><b>Numero de serie</b></td><td>SN-EXEMPLE-002</td></tr>
+</table></pre></td></tr>
+<tr><th>BIOS</th><td>American Megatrends Inc. 27</td></tr>
+<tr><th>Numero</th><td>SN-EXEMPLE-002</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Processeur</h2>
+<table>
+<tr><th>CPU</th><td>Intel(R) Celeron(R) CPU  J1900  @ 1.99GHz</td></tr>
+<tr><th>ID</th><td>BFEBFBFF00030678</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Memoire RAM</h2>
+<table>
+<tr><th>Total</th><td>8 GB - 1600 MHz</td></tr>
+<tr><th>Details</th><td><pre><table><tr><th>Slot</th><th>Capacite</th><th>Frequence</th><th>Numero de serie</th></tr><tr>
+    <td>A1_BANK0</td>
+    <td>4 GB</td>
+    <td>1600 MHz</td>
+    <td>SN-RAM-003  </td>
+    </tr><tr>
+    <td>A1_BANK1</td>
+    <td>4 GB</td>
+    <td>1600 MHz</td>
+    <td>SN-RAM-004  </td>
+    </tr></table></pre></td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Systeme</h2>
+<table>
+<tr><th>OS</th><td>Microsoft Windows 10 Entreprise Version 10.0.19045</td></tr>
+<tr><th>Windows</th><td><span style='color:green;font-weight:bold'>OK</span></td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Carte graphique</h2>
+<table>
+<tr><th>Statut</th><td><span style='color:green;font-weight:bold'>OK</span></td></tr>
+<tr><th>Details</th><td><b>Intel(R) HD Graphics</b><br>
+Type : GPU integre (Intel)<br>
+Memoire : 2112 MB<br>
+Driver : 10.18.10.4358<br>
+Statut : OK<br><br></td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Stockage</h2>
+<table>
+<tr><th>Disques</th><td><pre>C: SSD (118 GB) - 85 GB libres<br>D: SSD (0 GB) - 0 GB libres<br></pre></td></tr>
+<tr><th>Details</th><td><pre><table><tr><th>Modele</th><th>Type</th><th>Taille</th><th>Numero de serie</th></tr><tr>
+    <td>TS128GSSD340</td>
+    <td>SSD</td>
+    <td>119 GB</td>
+    <td>SN-SSD-EXEMPLE</td>
+    </tr></table></pre></td></tr>
+<tr><th>Sante</th><td><span style='color:green'>En bonne sante</span></td></tr>
+</table>
+</div><div class="section">
+<h2>Peripheriques (PC Fixe)</h2>
+<p>Les tests peripheriques ne sont pas applicables pour ce type de machine.</p>
+</div>
+<div class="section">
+<h2>Reseau</h2>
+<table>
+<tr><th>Ethernet</th><td>Intel(R) I211 Gigabit Network Connection 1 Gbps</td></tr>
+<tr><th>WiFi</th><td>WiFi actif</td></tr>
+<tr><th>Latence</th><td><span style='color:green;font-weight:bold'>OK</span><br><pre><table><tr><th>Serveur</th><th>Statut</th><th>Moy</th><th>Min</th><th>Max</th><th>Jitter</th></tr><tr>
+            <td>8.8.8.8</td>
+            <td class='ok'>OK</td>
+            <td>11.75</td>
+            <td>11</td>
+            <td>12</td>
+            <td>0.43</td>
+        </tr><tr>
+            <td>1.1.1.1</td>
+            <td class='ok'>OK</td>
+            <td>11.5</td>
+            <td>11</td>
+            <td>12</td>
+            <td>0.5</td>
+        </tr></table></pre></td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>USB</h2>
+<pre>Contrôleur hôte Intel(R) USB 3.0 eXtensible - 1.0 (Microsoft)<br>Périphérique USB composite<br>Concentrateur USB générique<br>Concentrateur USB SuperSpeed générique<br>Concentrateur USB générique<br>Concentrateur USB générique<br>Concentrateur USB générique<br>Concentrateur USB générique<br>Hub USB racine (USB 3.0)<br></pre>
+</div>
+
+<div class="section">
+<h2>Pilotes</h2>
+<pre><table><tr><th>Peripherique</th><th>Code erreur</th><th>ID materiel</th></tr><tr><td>Souris compatible PS/2</td><td style='color:red'>CM_PROB_DEVICE_NOT_THERE</td><td>ACPI\MSFT0003\0</td></tr></table></pre>
+</div>
+
+<div class="section">
+<h2>Antivirus</h2>
+<b>Statut :</b> <span style='color:green;font-weight:bold'>OK</span><br>
+<pre>EDR (endpoint) : <span style='color:green'>Actif</span><br>Windows Defender : <span style='color:gray'>Non accessible (EDR actif)</span><br></pre>
+</div>
+
+<div class="section">
+<h2>Batterie</h2>
+<pre>Aucune batterie detectee</pre>
+</div>
+
+<div class="section">
+    <h2>Applications & Services</h2>
+    <table>
+        <tr>
+            <th>Office 365</th>
+            <td><span style='color:green;font-weight:bold'>OK</span></td>
+        </tr>
+        <tr>
+            <th>SSO</th>
+            <td><span style='color:green;font-weight:bold'>OK</span></td>
+        </tr>
+        <tr>
+            <th>Citrix</th>
+            <td><span style='color:orange;font-weight:bold'>Igestor present (Citrix probablement installe)</span></td>
+        </tr>
+        <tr>
+            <th>Magasin applicatif interne</th>
+            <td>
+                <span style='color:green;font-weight:bold'>OK</span>
+                <br>
+                <small>Version: 5.2603.1030.1000 | Statut: Installe (raccourci detecte)</small>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+<h2>Photos</h2>
+<p style='color:orange;font-weight:bold'>
+Aucune photo disponible pour ce poste.
+</p>
+</div>
+
+</body>
+</html>
